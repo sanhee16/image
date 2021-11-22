@@ -13,14 +13,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     lateinit var imageAdapter: ImageAdapter
 
-    @SuppressLint("NotifyDataSetChanged")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.activity = this@MainActivity
 
         Log.v("TAG", "MainActivity")
-        var data = arrayListOf<ImageInfo>()
+        val data = arrayListOf<ImageInfo>()
         data.add(ImageInfo(1,"image1","https://cdn.pixabay.com/photo/2021/10/19/10/56/cat-6723256_960_720.jpg"))
         data.add(ImageInfo(2,"image2","https://cdn.pixabay.com/photo/2014/04/13/20/49/cat-323262_960_720.jpg"))
         data.add(ImageInfo(3,"image3","https://cdn.pixabay.com/photo/2016/10/31/14/55/rottweiler-1785760_960_720.jpg"))
